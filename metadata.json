@@ -1,0 +1,6 @@
+{
+  "name": "LinkPulse - URL Shortener & Analytics",
+  "description": "Clean, powerful URL shortener with custom alias support, live click telemetry, and QR code generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

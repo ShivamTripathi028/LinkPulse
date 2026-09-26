@@ -1,0 +1,53 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider             = "prisma-client-py"
+  interface            = "asyncio"
+  recursive_type_depth = 5
+}
+
+model Url {
+  id          String    @id @default(cuid())
+  originalUrl String
+  alias       String    @unique
+  title       String?
+  description String?
+  isCustom    Boolean   @default(false)
+  isActive    Boolean   @default(true)
+  password    String?
+  expiresAt   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  clicks      Click[]
+
+  @@index([alias])
+  @@index([createdAt])
+  @@map("urls")
+}
+
+model Click {
+  id          String   @id @default(uuid())
+  urlId       String
+  url         Url      @relation(fields: [urlId], references: [id], onDelete: Cascade)
+  timestamp   DateTime @default(now())
+  ip          String?
+  userAgent   String?
+  referer     String?
+  country     String?  @default("Unknown")
+  countryCode String?  @default("UN")
+  city        String?  @default("Unknown")
+  deviceType  String?  @default("desktop")
+  browser     String?  @default("Other")
+  os          String?  @default("Other")
+  status      Int      @default(307)
+
+  @@index([urlId])
+  @@index([timestamp])
+  @@index([country])
+  @@index([deviceType])
+  @@map("clicks")
+}

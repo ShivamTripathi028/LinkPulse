@@ -1,0 +1,50 @@
+[
+  {
+    "id": "url_1790320016146_gqfuo",
+    "originalUrl": "https://www.youtube.com/",
+    "alias": "yt",
+    "title": "yt",
+    "description": "",
+    "tags": [],
+    "isCustom": true,
+    "isActive": true,
+    "expiresAt": null,
+    "createdAt": "2026-09-25T07:06:56.146Z",
+    "updatedAt": "2026-09-25T07:06:56.146Z",
+    "clicksCount": 1
+  },
+  {
+    "id": "url_github",
+    "originalUrl": "https://github.com",
+    "alias": "github-repo",
+    "title": "GitHub Projects",
+    "description": "Code repository and open-source packages",
+    "tags": [
+      "dev",
+      "git"
+    ],
+    "isCustom": true,
+    "isActive": true,
+    "createdAt": "2026-09-19T07:06:29.636Z",
+    "updatedAt": "2026-09-19T07:06:29.636Z",
+    "clicksCount": 142,
+    "expiresAt": null
+  },
+  {
+    "id": "url_yt",
+    "originalUrl": "https://www.youtube.com",
+    "alias": "axis-ad",
+    "title": "YouTube Media",
+    "description": "Video streaming and media content",
+    "tags": [
+      "video",
+      "media"
+    ],
+    "isCustom": true,
+    "isActive": true,
+    "createdAt": "2026-09-22T07:06:29.636Z",
+    "updatedAt": "2026-09-22T07:06:29.636Z",
+    "clicksCount": 28,
+    "expiresAt": null
+  }
+]
