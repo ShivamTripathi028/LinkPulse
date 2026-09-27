@@ -1,5 +1,47 @@
 [
   {
+    "id": "clk_1790528226042_dpes",
+    "urlId": "url_1790528219535_j3h2n",
+    "timestamp": "2026-09-27T16:57:06.042Z",
+    "ip": "127.0.0.1",
+    "referer": "Direct",
+    "country": "United States",
+    "countryCode": "US",
+    "city": "San Francisco",
+    "deviceType": "desktop",
+    "browser": "Chrome",
+    "os": "macOS",
+    "status": 307
+  },
+  {
+    "id": "clk_1790527767188_lwix",
+    "urlId": "url_1790527738843_ecq5d",
+    "timestamp": "2026-09-27T16:49:27.189Z",
+    "ip": "127.0.0.1",
+    "referer": "Direct",
+    "country": "United States",
+    "countryCode": "US",
+    "city": "San Francisco",
+    "deviceType": "desktop",
+    "browser": "Chrome",
+    "os": "macOS",
+    "status": 307
+  },
+  {
+    "id": "clk_1790527767158_y6o3",
+    "urlId": "url_1790527738843_ecq5d",
+    "timestamp": "2026-09-27T16:49:27.158Z",
+    "ip": "198.51.100.42",
+    "referer": "Direct",
+    "country": "United States",
+    "countryCode": "US",
+    "city": "San Francisco",
+    "deviceType": "desktop",
+    "browser": "Chrome",
+    "os": "macOS",
+    "status": 307
+  },
+  {
     "id": "clk_1790320193683_6lwz",
     "urlId": "url_1790320016146_gqfuo",
     "timestamp": "2026-09-25T07:09:53.683Z",

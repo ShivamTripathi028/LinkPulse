@@ -95,10 +95,25 @@ export const ShortenPanel: React.FC<ShortenPanelProps> = ({
     }
   };
 
-  const copyText = (text: string, type: 'short' | 'direct') => {
-    navigator.clipboard.writeText(text);
-    setCopiedType(type);
-    setTimeout(() => setCopiedType(null), 2000);
+  const copyText = async (text: string, type: 'short' | 'direct') => {
+    try {
+      // Try modern clipboard API first
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        // Fallback for non-secure contexts (like 0.0.0.0)
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      }
+      setCopiedType(type);
+      setTimeout(() => setCopiedType(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy!', err);
+    }
   };
 
   const directWorkingUrl = latestCreated
